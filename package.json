@@ -2,5 +2,9 @@
   "name": "gauche-ou-droite",
   "version": "1.0.0",
   "private": true,
-  "scripts": { "start": "node server.mjs", "build": "node --check main.js && node --check server.mjs && node build.mjs" }
+  "scripts": {
+    "start": "node server.mjs",
+    "build": "node --check main.js && node --check server.mjs && node build.mjs",
+    "deploy": "npm run build && npx wrangler deploy"
+  }
 }

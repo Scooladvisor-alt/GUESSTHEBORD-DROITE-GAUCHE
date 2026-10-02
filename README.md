@@ -28,3 +28,8 @@ Dans Cloudflare Pages, importez ce dépôt GitHub puis utilisez ces paramètres 
 Le dossier `dist` est généré automatiquement et contient uniquement les fichiers
 statiques nécessaires au jeu. Après le premier déploiement, Cloudflare affiche
 l’URL publique dans l’onglet **Deployments**.
+
+Pour un déploiement Cloudflare Workers (commande `npx wrangler deploy`), le
+fichier `wrangler.jsonc` pointe explicitement vers `./dist`. Il ne faut jamais
+publier le répertoire racine (`.`), car il contient `node_modules` et Cloudflare
+refuse les fichiers binaires de plus de 25 MiB.
