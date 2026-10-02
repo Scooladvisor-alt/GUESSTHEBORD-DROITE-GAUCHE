@@ -1,0 +1,6 @@
+{
+  "name": "gauche-ou-droite",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "start": "node server.mjs", "build": "node --check main.js && node --check server.mjs" }
+}
